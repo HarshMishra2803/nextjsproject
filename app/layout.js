@@ -2,6 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import sessionWrapper from "@/components/sessionwrapper";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,17 +26,19 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        <div className="min-h-[87vh] bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"> 
-
-        {/* https://bg.ibelick.com/  for background */}
+        
+        <sessionWrapper>
+          
+        <Navbar/>
+        <div className="min-h-[87vh] bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]">
+          {/* https://bg.ibelick.com/  for background */}
 
           {children}
         </div>
 
-        <Footer />
+        <Footer/>
+        </sessionWrapper>
       </body>
     </html>
   );
 }
-
