@@ -38,5 +38,3 @@ export default function RootLayout({ children }) {
   );
 }
 
-
-//37.59
