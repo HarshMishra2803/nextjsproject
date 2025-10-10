@@ -12,12 +12,12 @@ const navbar = () => {
   // yae nai horha error aarha use session mae 
 
   // if (session) {
-  //   return (
+  //   return 
   //     <>
   //       Signed in as {session.user.email} <br />
   //       <button onClick={() => signOut()}>Sign out</button>  
   //     </>
-  //   );
+  //   
   // }
 
   return (
